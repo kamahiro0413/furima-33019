@@ -5,7 +5,7 @@ class Item < ApplicationRecord
   belongs_to :category
   belongs_to :condition
   belongs_to :shipping_cost
-  belongs_to :Prefecture
+  belongs_to :prefecture
   belongs_to :days_to_ship
 
   validates :price, numericality: { with: /\A[0-9]+\z/, message: 'Half-width number' }
