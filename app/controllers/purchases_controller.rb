@@ -5,12 +5,10 @@ class PurchasesController < ApplicationController
 
   def index
     @user_purchase = UserPurchase.new 
-    set_item
   end
 
   def create
     @user_purchase = UserPurchase.new(purchase_params)
-    set_item
      if @user_purchase.valid?
       pay_item    
       @user_purchase.save
